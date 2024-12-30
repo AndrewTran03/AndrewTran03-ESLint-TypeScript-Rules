@@ -1,0 +1,5 @@
+References:
+
+[1] YouTube Video: Blazing Fast Tips: Publishing to NPM (https://youtu.be/eh89VE3Mk5g?si=KbMwJJlaYFRUfvA_)
+    => Source Code: https://github.com/mattpocock/pkg-demo/tree/main
+[2] YouTube Video: How to make your own NPM package (Step-by-Step) 📦 (https://youtu.be/xnfdm-s8adI?si=ZGlqka-Uqqm8ojk2)

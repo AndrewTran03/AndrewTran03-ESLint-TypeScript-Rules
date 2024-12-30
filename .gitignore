@@ -1,0 +1,7 @@
+# Development Code Directories
+/dist
+/node_modules
+
+# Environment Variables (or OS-generated files)
+.env*
+.DS_Store

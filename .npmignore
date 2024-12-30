@@ -1,0 +1,20 @@
+# Development Code Directories
+/src
+/node_modules
+/.changeset
+/.github
+
+# Environment Variables (or OS-generated files)
+.env*
+.DS_Store
+
+# TS-Related Files
+tsconfig.json
+tsup.config.ts
+
+# Prettier-Related Files
+.prettierignore
+.prettierrc
+
+# Misc.
+personal-notes.txt
