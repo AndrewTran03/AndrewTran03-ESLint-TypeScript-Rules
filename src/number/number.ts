@@ -1,7 +1,6 @@
-
 /**
  * Check if a number is even or not
- * @param n 
+ * @param n
  * @returns true or false
  */
 export function isEven(n: number): boolean {
