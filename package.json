@@ -1,6 +1,6 @@
 {
   "name": "@andrewt03/eslint-typescript-rules",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Recommended ESLint Rules for general TypeScript, Node.js/Express.js, Angular, and React.js Projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
