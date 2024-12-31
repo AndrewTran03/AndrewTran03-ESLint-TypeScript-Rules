@@ -263,6 +263,11 @@ const UNICORN_ESLINT_CONFIG_RULES: ConfigRules = {
   "unicorn/require-number-to-fixed-digits-argument": "error"
 };
 
+export const SERVER_NODE_EXPRESS_ESLINT_CONFIG_RULES: ConfigRules = {
+  "no-console": "error",
+  "no-debugger": "error"
+};
+
 // Export all ESLint Ruleset Configurations
 export {
   STANDARD_ESLINT_CONFIG_RULES,
