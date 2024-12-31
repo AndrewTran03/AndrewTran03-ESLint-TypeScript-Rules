@@ -1,30 +1,33 @@
 {
   "name": "@andrewt03/eslint-typescript-rules",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Recommended ESLint Rules for general TypeScript, Node.js/Express.js, Angular, and React.js Projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "author": "Andrew Tran",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndrewTran03/AndrewTran03-ESLint-TypeScript-Rules.git"
   },
   "scripts": {
-    "build": "tsup \"src/**/*.ts*\"",
-    "changeset:init": "changeset init",
-    "changeset:create": "changeset",
-    "changeset:version": "changeset version",
+    "build": "tsup",
     "release": "npm run build && changeset publish",
     "publish": "npm publish --access public",
     "lint": "tsc",
     "prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ESLint", "TypeScript", "Node.js", "Express.js", "Angular", "React.js"],
+  "keywords": [
+    "ESLint",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "Angular",
+    "React.js"
+  ],
   "devDependencies": {
-    "@changesets/cli": "^2.27.11",
     "prettier": "^3.4.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
