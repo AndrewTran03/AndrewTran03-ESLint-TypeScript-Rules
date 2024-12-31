@@ -1,6 +1,6 @@
 {
   "name": "@andrewt03/eslint-typescript-rules",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Recommended ESLint Rules for general TypeScript, Node.js/Express.js, Angular, and React.js Projects",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -14,6 +14,9 @@
   "scripts": {
     "build": "tsup",
     "release": "npm run build && changeset publish",
+    "version:patch": "npm run lint && npm run prettier && npm version patch && npm install",
+    "version:minor": "npm run lint && npm run prettier && npm version minor && npm install",
+    "version:major": "npm run lint && npm run prettier && npm version major && npm install",
     "publish": "npm publish --access public",
     "lint": "tsc",
     "prettier": "prettier --write .",

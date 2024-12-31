@@ -1,2 +1,3 @@
-export * from "./hello/hello";
-export * from "./number/number";
+export * from "./hello";
+export * from "./number";
+export * from "./class";
