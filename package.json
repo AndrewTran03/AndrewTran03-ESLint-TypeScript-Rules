@@ -14,9 +14,9 @@
   "scripts": {
     "build": "tsup",
     "release": "npm run build && changeset publish",
-    "version:patch": "npm run lint && npm run prettier && npm run build && npm version patch && npm install && npm run publish",
-    "version:minor": "npm run lint && npm run prettier && npm run build && npm version minor && npm install && npm run publish",
-    "version:major": "npm run lint && npm run prettier && npm run build && npm version major && npm install && npm run publish",
+    "version:patch": "npm run prettier && npm run lint && npm run build && npm version patch && npm install && npm run publish",
+    "version:minor": "npm run prettier && npm run lint && npm run build && npm version minor && npm install && npm run publish",
+    "version:major": "npm run prettier && npm run lint && npm run build && npm version major && npm install && npm run publish",
     "publish": "npm publish --access public",
     "lint": "tsc",
     "prettier": "prettier --write .",
