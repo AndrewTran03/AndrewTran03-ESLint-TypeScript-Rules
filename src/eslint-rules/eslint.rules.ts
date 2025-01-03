@@ -9,8 +9,6 @@ import { ConfigRules } from "./types";
  */
 const STANDARD_ESLINT_CONFIG_RULES: ConfigRules = {
   semi: "error",
-  "no-console": "warn", // FE - Warn, BE - Error
-  "no-debugger": "warn", // FE - Warn, BE - Error
   "no-var": "error",
   "no-void": "error",
   "prefer-const": "error",
@@ -243,14 +241,81 @@ const UNICORN_ESLINT_CONFIG_RULES: ConfigRules = {
   "unicorn/require-number-to-fixed-digits-argument": "error"
 };
 
-export const SERVER_NODE_EXPRESS_ESLINT_CONFIG_RULES: ConfigRules = {
+const CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES: ConfigRules = {
   "no-console": "error",
   "no-debugger": "error"
 };
 
+const CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES: ConfigRules = {
+  "no-console": "error",
+  "no-debugger": "error"
+};
+
+/**
+ * @tutorial [Angular-ESLint-Reference](https://www.npmjs.com/package/@angular-eslint/eslint-plugin)
+ */
+const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
+  "@angular-eslint/contextual-lifecycle": "error",
+  "@angular-eslint/no-async-lifecycle-method": "error",
+  "@angular-eslint/no-attribute-decorator": "error",
+  "@angular-eslint/sort-lifecycle-methods": "error",
+  "@angular-eslint/component-class-suffix": [
+    "error",
+    {
+      suffixes: ["Component"]
+    }
+  ],
+  "@angular-eslint/component-selector": [
+    "warn",
+    {
+      type: "element",
+      prefix: "app",
+      style: "kebab-case"
+    }
+  ],
+  "@angular-eslint/directive-class-suffix": [
+    "error",
+    {
+      suffixes: ["Directive"]
+    }
+  ],
+  "@angular-eslint/directive-selector": [
+    "warn",
+    {
+      type: "attribute",
+      prefix: "app",
+      style: "camelCase"
+    }
+  ],
+  "@angular-eslint/consistent-component-styles": "error",
+  "@angular-eslint/no-conflicting-lifecycle": "error",
+  "@angular-eslint/no-duplicates-in-metadata-arrays": "error",
+  "@angular-eslint/no-empty-lifecycle-method": "error",
+  "@angular-eslint/no-input-rename": "error",
+  "@angular-eslint/no-inputs-metadata-property": "error",
+  "@angular-eslint/no-lifecycle-call": "error",
+  "@angular-eslint/no-output-rename": "error",
+  "@angular-eslint/no-pipe-impure": "error",
+  "@angular-eslint/prefer-output-readonly": "error",
+  "@angular-eslint/prefer-standalone": "error",
+  "@angular-eslint/use-component-selector": "error",
+  "@angular-eslint/use-lifecycle-interface": "error",
+  "@angular-eslint/relative-url-prefix": "error",
+  "@angular-eslint/use-pipe-transform-interface": "error"
+};
+
+/**
+ * @tutorial [React-ESLint-Reference](https://google.com)
+ */
+const REACT_ESLINT_CONFIG_RULES: ConfigRules = {};
+
 // Export all ESLint Ruleset Configurations
 export {
+  CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES,
+  CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES,
   STANDARD_ESLINT_CONFIG_RULES,
   TYPESCRIPT_ESLINT_CONFIG_RULES,
-  UNICORN_ESLINT_CONFIG_RULES
+  UNICORN_ESLINT_CONFIG_RULES,
+  ANGULAR_ESLINT_CONFIG_RULES,
+  REACT_ESLINT_CONFIG_RULES
 };
