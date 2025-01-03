@@ -3,3 +3,10 @@ References:
 [1] YouTube Video: Blazing Fast Tips: Publishing to NPM (https://youtu.be/eh89VE3Mk5g?si=KbMwJJlaYFRUfvA_)
     => Source Code: https://github.com/mattpocock/pkg-demo/tree/main
 [2] YouTube Video: How to make your own NPM package (Step-by-Step) 📦 (https://youtu.be/xnfdm-s8adI?si=ZGlqka-Uqqm8ojk2)
+
+When ready to commit:
+[1] Format: "npm run prettier"
+[2] Lint: "npm run lint"
+[3] Build: "npm run build"
+[4] Commit and Push Code to Git: "git commit -m <message>" and "git push origin main"
+[5] Publish to NPM: "npm run version:patch"
