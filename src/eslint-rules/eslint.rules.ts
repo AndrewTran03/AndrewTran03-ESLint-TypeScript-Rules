@@ -335,10 +335,49 @@ const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
 };
 
 /**
- * @tutorial [React-ESLint-Reference](https://google.com)
+ * @tutorial [React-ESLint-Reference](https://www.npmjs.com/package/eslint-plugin-react)
  */
 const REACT_ESLINT_CONFIG_RULES: ConfigRules = {
-  "react/hook-use-state": "error"
+  "react/hook-use-state": "error",
+  "react/destructuring-assignment": "error",
+  "react/no-danger": "error",
+  "react/no-danger-with-children": "error",
+  "react/no-deprecated": "error",
+  "react/no-multi-comp": "error",
+  "react/no-unused-prop-types": "warn",
+  "react/prop-types": "off",
+  "react/react-in-jsx-scope": "off",
+  "react/boolean-prop-naming": "error",
+  "react/no-array-index-key": "error",
+  "react/no-direct-mutation-state": "error",
+  "react/no-typos": "error",
+  "react/jsx-no-target-blank": "error",
+  "react/jsx-pascal-case": "error",
+  "react/no-access-state-in-setstate": "error",
+  "react/jsx-boolean-value": ["error", "always"],
+  "react/jsx-no-comment-textnodes": "error",
+  "react/jsx-no-duplicate-props": "error",
+  "react/jsx-fragments": "error",
+  "react/jsx-curly-brace-presence": [
+    "error",
+    {
+      props: "never",
+      children: "never",
+      propElementValues: "always"
+    }
+  ],
+  "react/jsx-uses-vars": "error",
+  "react/no-unused-state": "error",
+  "react/prefer-read-only-props": "error",
+  "react/self-closing-comp": "error",
+  "react/void-dom-elements-no-children": "error"
+};
+
+/**
+ * @tutorial [React-Hooks-ESLint-Reference](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+ */
+const REACT_HOOKS_ESLINT_CONFIG_RULES = {
+  "react-hooks/rules-of-hooks": "error"
 };
 
 // Export all ESLint Ruleset Configurations
@@ -350,5 +389,6 @@ export {
   TYPESCRIPT_ESLINT_CONFIG_RULES,
   UNICORN_ESLINT_CONFIG_RULES,
   ANGULAR_ESLINT_CONFIG_RULES,
-  REACT_ESLINT_CONFIG_RULES
+  REACT_ESLINT_CONFIG_RULES,
+  REACT_HOOKS_ESLINT_CONFIG_RULES
 };
