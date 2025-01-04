@@ -242,8 +242,8 @@ const UNICORN_ESLINT_CONFIG_RULES: ConfigRules = {
 };
 
 const CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES: ConfigRules = {
-  "no-console": "error",
-  "no-debugger": "error"
+  "no-console": "warn",
+  "no-debugger": "warn"
 };
 
 const CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES: ConfigRules = {
