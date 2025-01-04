@@ -337,7 +337,9 @@ const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
 /**
  * @tutorial [React-ESLint-Reference](https://google.com)
  */
-const REACT_ESLINT_CONFIG_RULES: ConfigRules = {};
+const REACT_ESLINT_CONFIG_RULES: ConfigRules = {
+  "react/hook-use-state": "error"
+};
 
 // Export all ESLint Ruleset Configurations
 export {
