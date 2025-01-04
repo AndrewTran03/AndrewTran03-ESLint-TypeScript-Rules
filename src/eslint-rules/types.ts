@@ -6,6 +6,8 @@ type ConsistentGenericConstructorOverrideRuleOptions =
   | "constructor"
   | "type-annotation";
 
+type QuotesOverrideRuleOptions = "single" | "double" | "backtick";
+
 type ConsistentTypeDefinitionsOverrideRuleOptions = "interface" | "type";
 
 export type ConfigRules = {
@@ -18,5 +20,6 @@ export type ConfigRules = {
     | ["warn" | "error", "always" | "never"]
     | ["warn" | "error", "always" | "never", ESLintOverrideRuleOptions]
     | ["warn" | "error", ConsistentGenericConstructorOverrideRuleOptions]
-    | ["warn" | "error", ConsistentTypeDefinitionsOverrideRuleOptions];
+    | ["warn" | "error", ConsistentTypeDefinitionsOverrideRuleOptions]
+    | ["warn" | "error", QuotesOverrideRuleOptions, ESLintOverrideRuleOptions];
 };

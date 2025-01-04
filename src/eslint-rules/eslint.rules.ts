@@ -9,6 +9,14 @@ import { ConfigRules } from "./types";
  */
 const STANDARD_ESLINT_CONFIG_RULES: ConfigRules = {
   semi: "error",
+  quotes: [
+    "error",
+    "double",
+    {
+      avoidEscape: true,
+      allowTemplateLiterals: true
+    }
+  ],
   "no-var": "error",
   "no-void": "error",
   "prefer-const": "error",
@@ -99,6 +107,16 @@ const STANDARD_ESLINT_CONFIG_RULES: ConfigRules = {
     "always",
     { enforceForIfStatements: true }
   ],
+  // "sort-imports": [
+  //   "error",
+  //   {
+  //     ignoreCase: false,
+  //     ignoreDeclarationSort: false,
+  //     ignoreMemberSort: false,
+  //     memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+  //     allowSeparatedGroups: true
+  //   }
+  // ],
   "no-restricted-syntax": [
     "error",
     {
@@ -252,6 +270,18 @@ const CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES: ConfigRules = {
 };
 
 /**
+ * @tutorial [ESLint-Plugin-Simple-Import-Sort-Reference](https://www.npmjs.com/package/eslint-plugin-simple-import-sort)
+ * @tutorial [ESLint-Plugin-Import-Reference](https://www.npmjs.com/package/eslint-plugin-import)
+ */
+const SORT_IMPORT_ESLINT_CONFIG_RULES: ConfigRules = {
+  "simple-import-sort/imports": "error",
+  "simple-import-sort/exports": "error",
+  "import/first": "error",
+  "import/newline-after-import": "error",
+  "import/no-duplicates": "error"
+};
+
+/**
  * @tutorial [Angular-ESLint-Reference](https://www.npmjs.com/package/@angular-eslint/eslint-plugin)
  */
 const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
@@ -313,6 +343,7 @@ const REACT_ESLINT_CONFIG_RULES: ConfigRules = {};
 export {
   CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES,
   CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES,
+  SORT_IMPORT_ESLINT_CONFIG_RULES,
   STANDARD_ESLINT_CONFIG_RULES,
   TYPESCRIPT_ESLINT_CONFIG_RULES,
   UNICORN_ESLINT_CONFIG_RULES,
