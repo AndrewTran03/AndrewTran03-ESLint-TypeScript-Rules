@@ -168,7 +168,7 @@ export default [
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: new URL(".", import.meta.url).pathname,
+        tsconfigRootDir: process.cwd(),
 
         // React-Specific (Omit if not necessary)
         ecmaFeatures: {
