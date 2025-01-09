@@ -38,6 +38,7 @@ eslint-plugin-react-hooks
   }
 }
 ```
+
 - **Note:** Please change the directory path in these commands based on your project configuration and use-case!
 - Type `npm run lint` in your terminal to log your linting warnings/errors.
 - Type `npm run lint:fix` in your terminal to allow `ESLint` to try and resolve your linting warnings/errors within your project (wherever possible).
