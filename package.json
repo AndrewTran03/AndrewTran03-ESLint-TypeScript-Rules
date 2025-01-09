@@ -11,6 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/AndrewTran03/AndrewTran03-ESLint-TypeScript-Rules.git"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://www.npmjs.com/package/@andrewt03/eslint-typescript-rules"
+  },
   "scripts": {
     "build": "rm -rf dist/ && tsup",
     "precheck": "npm run prettier && npm run lint && npm run build",
