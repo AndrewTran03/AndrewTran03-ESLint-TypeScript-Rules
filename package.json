@@ -12,7 +12,7 @@
     "url": "git+https://github.com/AndrewTran03/AndrewTran03-ESLint-TypeScript-Rules.git"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "rm -rf dist/ && tsup",
     "release": "npm run build && changeset publish",
     "version:patch": "npm run prettier && npm run lint && npm run build && npm version patch && npm install && npm run publish",
     "version:minor": "npm run prettier && npm run lint && npm run build && npm version minor && npm install && npm run publish",
