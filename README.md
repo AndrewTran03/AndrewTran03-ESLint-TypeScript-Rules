@@ -12,8 +12,8 @@ eslint
 eslint-plugin-import
 eslint-plugin-simple-import-sort
 eslint-plugin-unicorn
-typescript-eslint 
-@typescript-eslint/utils 
+typescript-eslint
+@typescript-eslint/utils
 globals
 
 # Angular-Specific:
@@ -27,6 +27,7 @@ eslint-plugin-react-hooks
 ## Example Usage
 
 ### `NPM` File Configuration
+
 - Add the following lines to your `package.json` under `scripts`:
 
 ```json
@@ -35,7 +36,7 @@ eslint-plugin-react-hooks
     // TODO: [REMOVE THIS COMMENT] Other NPM project aliases (here)...
     // TODO: [REMOVE THIS COMMENT] Change directory path in these commands based on project configuration and use-case...
     "lint": "eslint \"./src\"",
-    "lint:fix": "eslint \"./src\" --fix",
+    "lint:fix": "eslint \"./src\" --fix"
   }
 }
 ```
@@ -46,7 +47,9 @@ eslint-plugin-react-hooks
 ### `ESLint` File Configuration
 
 #### Recommended (Stable) - `CommonJS`
+
 ---
+
 ```js
 // eslint.config.cjs
 const ESLINT_RULES = require("@andrewt03/eslint-typescript-rules");
@@ -65,7 +68,7 @@ module.exports = [
   },
   {
     files: ["src/**/*.ts", "src/**/*.tsx"],
-    
+
     // React-Specific (Omit if not necessary)
     settings: {
       react: {
@@ -79,12 +82,11 @@ module.exports = [
       parserOptions: {
         projectService: true,
         tsconfigRootDir: __dirname,
-        
+
         // React-Specific (Omit if not necessary)
         ecmaFeatures: {
           jsx: true
         }
-
       }
     },
     plugins: {
@@ -99,7 +101,6 @@ module.exports = [
       // React-Specific (Omit if not necessary)
       react: eslintReactPlugin,
       "react-hooks": eslintReactHooksPlugin
-
     },
     rules: {
       // Standard ESLint Rules
@@ -119,7 +120,7 @@ module.exports = [
       ...ESLINT_RULES.SORT_IMPORT_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: Angular
-      ...ESLINT_RULES.ANGULAR_ESLINT_CONFIG_RULES, 
+      ...ESLINT_RULES.ANGULAR_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: React
       ...ESLINT_RULES.REACT_ESLINT_CONFIG_RULES,
@@ -134,7 +135,9 @@ module.exports = [
 ### Alternative - `ESModules`
 
 - **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
+
 ---
+
 ```js
 // eslint.config.mjs
 import ESLINT_RULES from "@andrewt03/eslint-typescript-rules";
