@@ -131,7 +131,7 @@ module.exports = [
 ];
 ```
 
-### Alternative - `ESModules`
+#### Alternative - `ESModules`
 
 - **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
 
