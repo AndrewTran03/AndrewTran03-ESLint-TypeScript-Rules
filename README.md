@@ -1,4 +1,4 @@
-# `AndrewTran03-ESLint-TypeScript-Rules` &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@andrewt03/eslint-typescript-rules.svg?style=flat)](https://www.npmjs.com/package/@andrewt03/eslint-typescript-rules)
+# `AndrewTran03-ESLint-TypeScript-Rules` &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AndrewTran03/AndrewTran03-ESLint-TypeScript-Rules/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/@andrewt03/eslint-typescript-rules.svg?style=flat)](https://www.npmjs.com/package/@andrewt03/eslint-typescript-rules)
 
 The `AndrewTran03-ESLint-TypeScript-Rules` package is `recommended` ESLint Rules for general `TypeScript`, `Node.js/Express.js`, `Angular`, and `React.js` Projects that utilize `TypeScript` for development.
 
