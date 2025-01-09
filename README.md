@@ -33,14 +33,12 @@ eslint-plugin-react-hooks
 ```json
 {
   "scripts": {
-    // TODO: [REMOVE THIS COMMENT] Other NPM project aliases (here)...
-    // TODO: [REMOVE THIS COMMENT] Change directory path in these commands based on project configuration and use-case...
     "lint": "eslint \"./src\"",
     "lint:fix": "eslint \"./src\" --fix"
   }
 }
 ```
-
+- **Note:** Please change the directory path in these commands based on your project configuration and use-case!
 - Type `npm run lint` in your terminal to log your linting warnings/errors.
 - Type `npm run lint:fix` in your terminal to allow `ESLint` to try and resolve your linting warnings/errors within your project (wherever possible).
 
