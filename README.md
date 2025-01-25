@@ -127,6 +127,34 @@ module.exports = [
       ...ESLINT_RULES.SORT_IMPORT_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: Angular
+      "@angular-eslint/component-class-suffix": [
+        "error",
+        {
+          suffixes: ["Component"]
+        }
+      ],
+      "@angular-eslint/component-selector": [
+        "warn",
+        {
+          type: "element",
+          prefix: "app",
+          style: "kebab-case"
+        }
+      ],
+      "@angular-eslint/directive-class-suffix": [
+        "error",
+        {
+          suffixes: ["Directive"]
+        }
+      ],
+      "@angular-eslint/directive-selector": [
+        "warn",
+        {
+          type: "attribute",
+          prefix: "app",
+          style: "camelCase"
+        }
+      ],
       ...ESLINT_RULES.ANGULAR_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: React
@@ -215,6 +243,34 @@ export default [
       ...ESLINT_RULES.SORT_IMPORT_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: Angular
+      "@angular-eslint/component-class-suffix": [
+        "error",
+        {
+          suffixes: ["Component"]
+        }
+      ],
+      "@angular-eslint/component-selector": [
+        "warn",
+        {
+          type: "element",
+          prefix: "app",
+          style: "kebab-case"
+        }
+      ],
+      "@angular-eslint/directive-class-suffix": [
+        "error",
+        {
+          suffixes: ["Directive"]
+        }
+      ],
+      "@angular-eslint/directive-selector": [
+        "warn",
+        {
+          type: "attribute",
+          prefix: "app",
+          style: "camelCase"
+        }
+      ],
       ...ESLINT_RULES.ANGULAR_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: React
