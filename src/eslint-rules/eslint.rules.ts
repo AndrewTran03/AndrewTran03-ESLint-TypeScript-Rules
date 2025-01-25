@@ -302,12 +302,12 @@ const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
   "@angular-eslint/no-async-lifecycle-method": "error",
   "@angular-eslint/no-attribute-decorator": "error",
   "@angular-eslint/sort-lifecycle-methods": "error",
-  "@angular-eslint/component-class-suffix": [
-    "error",
-    {
-      suffixes: ["Component"]
-    }
-  ],
+  // "@angular-eslint/component-class-suffix": [
+  //   "error",
+  //   {
+  //     suffixes: ["Component"]
+  //   }
+  // ],
   // "@angular-eslint/component-selector": [
   //   "warn",
   //   {
@@ -316,12 +316,12 @@ const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
   //     style: "kebab-case"
   //   }
   // ],
-  "@angular-eslint/directive-class-suffix": [
-    "error",
-    {
-      suffixes: ["Directive"]
-    }
-  ],
+  // "@angular-eslint/directive-class-suffix": [
+  //   "error",
+  //   {
+  //     suffixes: ["Directive"]
+  //   }
+  // ],
   // "@angular-eslint/directive-selector": [
   //   "warn",
   //   {
