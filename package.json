@@ -18,9 +18,9 @@
   "scripts": {
     "build": "rm -rf dist/ && tsup",
     "precheck": "npm run prettier && npm run lint && npm run build",
-    "version:patch": "npm run precheck && npm version patch && npm install && npm publish:public",
-    "version:minor": "npm run precheck && npm version minor && npm install && npm publish",
-    "version:major": "npm run precheck && npm version major && npm install && npm publish",
+    "version:patch": "npm run precheck && npm version patch && npm install && npm run publish:public",
+    "version:minor": "npm run precheck && npm version minor && npm install && npm run publish",
+    "version:major": "npm run precheck && npm version major && npm install && npm run publish",
     "publish:public": "npm publish --access public",
     "lint": "tsc",
     "prettier": "prettier --write .",
