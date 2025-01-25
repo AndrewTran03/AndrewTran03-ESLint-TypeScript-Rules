@@ -13,14 +13,14 @@
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://www.npmjs.com/package/@andrewt03/eslint-typescript-rules"
+    "registry": "https://www.npmjs.com/"
   },
   "scripts": {
     "build": "rm -rf dist/ && tsup",
     "precheck": "npm run prettier && npm run lint && npm run build",
     "version:patch": "npm run precheck && npm version patch && npm install && npm run publish:public",
-    "version:minor": "npm run precheck && npm version minor && npm install && npm run publish",
-    "version:major": "npm run precheck && npm version major && npm install && npm run publish",
+    "version:minor": "npm run precheck && npm version minor && npm install && npm run publish:public",
+    "version:major": "npm run precheck && npm version major && npm install && npm run publish:public",
     "publish:public": "npm publish --access public",
     "lint": "tsc",
     "prettier": "prettier --write .",
