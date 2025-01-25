@@ -295,28 +295,28 @@ const ANGULAR_ESLINT_CONFIG_RULES: ConfigRules = {
       suffixes: ["Component"]
     }
   ],
-  "@angular-eslint/component-selector": [
-    "warn",
-    {
-      type: "element",
-      prefix: "app",
-      style: "kebab-case"
-    }
-  ],
+  // "@angular-eslint/component-selector": [
+  //   "warn",
+  //   {
+  //     type: "element",
+  //     prefix: "app",
+  //     style: "kebab-case"
+  //   }
+  // ],
   "@angular-eslint/directive-class-suffix": [
     "error",
     {
       suffixes: ["Directive"]
     }
   ],
-  "@angular-eslint/directive-selector": [
-    "warn",
-    {
-      type: "attribute",
-      prefix: "app",
-      style: "camelCase"
-    }
-  ],
+  // "@angular-eslint/directive-selector": [
+  //   "warn",
+  //   {
+  //     type: "attribute",
+  //     prefix: "app",
+  //     style: "camelCase"
+  //   }
+  // ],
   "@angular-eslint/consistent-component-styles": "error",
   "@angular-eslint/no-conflicting-lifecycle": "error",
   "@angular-eslint/no-duplicates-in-metadata-arrays": "error",
