@@ -225,8 +225,21 @@ const TYPESCRIPT_ESLINT_CONFIG_RULES: ConfigRules = {
   "@typescript-eslint/require-array-sort-compare": "error",
   "require-await": "off",
   "@typescript-eslint/require-await": "error",
-  "@typescript-eslint/no-invalid-void-type": "error"
-  // "@typescript-eslint/sort-type-constituents": "error"
+  "@typescript-eslint/no-invalid-void-type": "error",
+  // "@typescript-eslint/sort-type-constituents": "error",
+  /**
+   * @tutorial [Naming-Convention-Reference](https://typescript-eslint.io/rules/naming-convention/)
+   * New Rule: Intended for developers to use camelCase for boolean variables with only the allowed prefix-terms.
+   */
+  "@typescript-eslint/naming-convention": [
+    "error",
+    {
+      selector: "variable",
+      types: ["boolean"],
+      format: ["camelCase"],
+      prefix: ["is", "should", "has", "can", "will"]
+    }
+  ]
 };
 
 /**
