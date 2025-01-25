@@ -228,7 +228,7 @@ const TYPESCRIPT_ESLINT_CONFIG_RULES: ConfigRules = {
   "@typescript-eslint/no-invalid-void-type": "error",
   // "@typescript-eslint/sort-type-constituents": "error",
   /**
-   * @tutorial [Naming-Convention-Reference](https://typescript-eslint.io/play/#ts=5.7.2&showAST=es&fileType=.tsx&code=MYewdgzgLgBAbgQwE4EsECMA2BTGBeGAMwUwmwG4AoHWFCANWTS1wKiQFcLLLsAPAA4gksYJgQQIMACIIoCAMIgAtkLDYwsAN6UYMAakRRcdBQAtswANbYAJgC4Y6ECBwIw%2BIiTJU9BlEa4wBbWdp7EpNy6MKCQ7BzAUMIAFACUMFowAL48egDm2FAAgpiYsvJpGdF6sRCu2AB0mCB5yQBEABIobam%2B2bkxZu4FAMryxsnqAO5jctiOmQiJAXOOzvXuADQx7kXLgWsubh5Z6Tp6NeB1OE0tyZnTs8bZvdE5OZS1sArikgBMnnO%2BiQIAEjgiZE20ToAAUQWCvJEofkkNhCo5KngAHxVC4xK71W6tTrdV56LJQj6EDhgZbgYEoTQAISO2HcyTIOESdkOGzA2zoI2wXOMtj%2BvOOZ2itUJzVanMsooFECFIrsf1eHygAE8BLhpNhlCBAdF1pgJWz%2BZQslQdXqZIaQACCEC6Cy%2BRattaqJQgA&eslintrc=N4KABGBEBOCuA2BTAzpAXGUEKQAIBcBPABxQGNoBLY-AWhXkoDt8B6JgQwFtmBzWsgHsmAN0QtKw9GADa4bDkTRog6JAA08hVgXZIyREjL5V0mZBEcqHAEZINUYitLQiDyMSvdE%2BJZAC6mrp6RKSoGHLBCpA2goJIHEyQWrqBKdFOiABmlAAeZum6kJSoQVE4yAAWgggAJhqF0ZUcpY16ZIkN5TgA7pTw8Mnl-oUAvikjEOOjQA&tsconfig=N4KABGBEDGD2C2AHAlgGwKYCcDyiAuysAdgM6QBcYoEEkJemy0eAcgK6qoDCAFutAGsylBm3TgwAXxCSgA&tokens=false)
+   * @tutorial [Naming-Convention-Reference](https://typescript-eslint.io/play/#ts=5.7.2&showAST=es&fileType=.tsx&code=MYewdgzgLgBAbgQwE4EsECMA2BTGBeGAMwUwmwG4AoHWFCANWTS1wKiQFcLLLsAPAA4gksYJgQQIMACIIoCAMIgAtkLDYwsAN6UYMAakRRcdBQAtswANbYAJgC4Y6ECBwIw%2BIiTJU9BlEa4wBbWdp7EpNy6MKCQ7BzAUMIAFACUMFowAL48egDm2FAAgpiYsvJpGdF6sRCu2AB0mCB5yQBEABIobam%2B2bkxZu4FAMryxsnqAO5jctiOmQiJAXOOzvXuADQx7kXLgWsubh5Z6Tp6NeB1OE0tyZnTs8bZvdE5OZS1sArikgBMnnO%2BiQIAEjgiZE20ToAAUQWCvJEofkkNhCo5KngAHxVC4xK71W6tTrdV56LJQj6EDhgZbgYEoTQAISO2HcyTIOESdkOGzA2zoI2wXOMtj%2BvOOZ2itUJzVanMsooFECFIrsf1eHygAE8BLhpNhlCBAdF1pgJWz%2BZQslQdXqZIaQACCEC6Cy%2BRattaqJQgA&eslintrc=N4KABGBEBOCuA2BTAzpAXGUEKQAIBcBPABxQGNoBLY-AWhXkoDt8B6JgQwFtmBzWsgHsmAN0QtKw9GADa4bDkTRog6JAA08hVgXZIyREjL5V0mZBEcqHAEZINUYitLQiDyMSvdE%2BJZAC6mrp6RKSoGHLBCpA2goJIHEyQWrqBKdEAZqpcHPhmkAAKHMhkHPAAwsWIAUFRHtCIGZQAHmbpupCUqLVRUMgAFoIIACYa7dH9xWO9OKVJPXUA7pTw8Mm9-u0AvimbEDtbQA&tsconfig=N4KABGBEDGD2C2AHAlgGwKYCcDyiAuysAdgM6QBcYoEEkJemy0eAcgK6qoDCAFutAGsylBm3TgwAXxCSgA&tokens=false)
    * New Rule: Intended for developers to use camelCase for boolean variables with only the allowed prefix-terms.
    */
   "@typescript-eslint/naming-convention": [
@@ -236,6 +236,7 @@ const TYPESCRIPT_ESLINT_CONFIG_RULES: ConfigRules = {
     {
       selector: ["variable", "property", "parameter"],
       types: ["boolean"],
+      format: ["PascalCase"],
       prefix: ["is", "should", "has", "can", "will", "needs"]
     }
   ]
