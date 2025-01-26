@@ -234,7 +234,7 @@ const TYPESCRIPT_ESLINT_CONFIG_RULES: ConfigRules = {
   "@typescript-eslint/naming-convention": [
     "error",
     {
-      selector: ["variable", "property", "parameter"],
+      selector: ["variable", "classProperty", "parameter"],
       types: ["boolean"],
       format: ["PascalCase"],
       prefix: ["is", "should", "has", "can", "will", "needs"]
