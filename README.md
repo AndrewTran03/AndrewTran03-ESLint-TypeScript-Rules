@@ -169,7 +169,7 @@ module.exports = [
 
 #### Alternative - `ESModules`
 
-- **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
+- **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `import.meta.dirname` or `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
 
 ---
 
@@ -184,6 +184,8 @@ import eslintImportPlugin from "eslint-plugin-import";
 import angularEslintPlugin from "@angular-eslint/eslint-plugin";
 import eslintReactPlugin from "eslint-plugin-react";
 import eslintReactHooksPlugin from "eslint-plugin-react-hooks";
+
+const DIR_NAME = import.meta.dirname;
 
 export default [
   {
@@ -204,7 +206,7 @@ export default [
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: process.cwd(),
+        tsconfigRootDir: DIR_NAME,
 
         // React-Specific (Omit if not necessary)
         ecmaFeatures: {
