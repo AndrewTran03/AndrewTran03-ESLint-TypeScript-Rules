@@ -237,7 +237,18 @@ const TYPESCRIPT_ESLINT_CONFIG_RULES: ConfigRules = {
       selector: ["variable", "classProperty", "parameter"],
       types: ["boolean"],
       format: ["PascalCase"],
-      prefix: ["is", "should", "has", "can", "will", "needs"]
+      prefix: [
+        "is",
+        "should",
+        "has",
+        "can",
+        "could",
+        "needs",
+        "may",
+        "must",
+        "does",
+        "will"
+      ]
     }
   ]
 };
