@@ -10,16 +10,16 @@ type QuotesOverrideRuleOptions = "single" | "double" | "backtick";
 
 type ConsistentTypeDefinitionsOverrideRuleOptions = "interface" | "type";
 
-export type ConfigRules = {
-  [key: string]:
-    | "off"
-    | "warn"
-    | "error"
-    | ["warn" | "error", ESLintOverrideRuleOptions]
-    | ["warn" | "error", ...ESLintOverrideRuleOptions[]]
-    | ["warn" | "error", "always" | "never"]
-    | ["warn" | "error", "always" | "never", ESLintOverrideRuleOptions]
-    | ["warn" | "error", ConsistentGenericConstructorOverrideRuleOptions]
-    | ["warn" | "error", ConsistentTypeDefinitionsOverrideRuleOptions]
-    | ["warn" | "error", QuotesOverrideRuleOptions, ESLintOverrideRuleOptions];
-};
+export type ConfigRules = Record<
+  string,
+  | "off"
+  | "warn"
+  | "error"
+  | ["warn" | "error", ESLintOverrideRuleOptions]
+  | ["warn" | "error", ...ESLintOverrideRuleOptions[]]
+  | ["warn" | "error", "always" | "never"]
+  | ["warn" | "error", "always" | "never", ESLintOverrideRuleOptions]
+  | ["warn" | "error", ConsistentGenericConstructorOverrideRuleOptions]
+  | ["warn" | "error", ConsistentTypeDefinitionsOverrideRuleOptions]
+  | ["warn" | "error", QuotesOverrideRuleOptions, ESLintOverrideRuleOptions]
+>;
