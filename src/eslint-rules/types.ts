@@ -1,6 +1,7 @@
-type ESLintOverrideRuleOptions = {
-  [key: string]: string | number | boolean | string[];
-};
+type ESLintOverrideRuleOptions = Record<
+  string,
+  string | number | boolean | string[]
+>;
 
 type ConsistentGenericConstructorOverrideRuleOptions =
   | "constructor"
