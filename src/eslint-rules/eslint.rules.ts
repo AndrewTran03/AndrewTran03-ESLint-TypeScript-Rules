@@ -404,6 +404,69 @@ const REACT_HOOKS_ESLINT_CONFIG_RULES = {
   "react-hooks/rules-of-hooks": "error"
 };
 
+/**
+ * @tutorial [Angular-HTML-Template-ESLint-Reference](https://www.npmjs.com/package/@angular-eslint/eslint-plugin-template)
+ */
+const ANGULAR_HTML_TEMPLATE_ESLINT_CONFIG_RULES: ConfigRules = {
+  "@angular-eslint/template/alt-text": "warn",
+  "@angular-eslint/template/banana-in-box": "error",
+  "@angular-eslint/template/button-has-type": "error",
+  "@angular-eslint/template/click-events-have-key-events": "warn",
+  "@angular-eslint/template/conditional-complexity": "error",
+  "@angular-eslint/template/cyclomatic-complexity": "error",
+  "@angular-eslint/template/elements-content": "warn",
+  "@angular-eslint/template/eqeqeq": [
+    "error",
+    {
+      allowNullOrUndefined: true
+    }
+  ],
+  // "@angular-eslint/template/i18n": "warn", // Disabled due to excessive warnings; enable if internationalization is a priority
+  "@angular-eslint/template/interactive-supports-focus": "warn",
+  "@angular-eslint/template/mouse-events-have-key-events": "warn",
+  "@angular-eslint/template/no-any": "error",
+  "@angular-eslint/template/no-autofocus": "warn",
+  // "@angular-eslint/template/no-call-expression": "warn",
+  "@angular-eslint/template/no-distracting-elements": "warn",
+  "@angular-eslint/template/no-empty-control-flow": "warn",
+  "@angular-eslint/template/no-inline-styles": "warn",
+  "@angular-eslint/template/no-interpolation-in-attributes": [
+    "error",
+    {
+      allowSubstringInterpolation: true
+    }
+  ],
+  "@angular-eslint/template/no-negated-async": "error",
+  "@angular-eslint/template/no-positive-tabindex": "warn",
+  "@angular-eslint/template/prefer-at-else": "error",
+  "@angular-eslint/template/prefer-at-empty": "warn",
+  "@angular-eslint/template/prefer-built-in-pipes": "error",
+  "@angular-eslint/template/prefer-contextual-for-variables": "warn",
+  "@angular-eslint/template/prefer-control-flow": "error",
+  // "@angular-eslint/template/prefer-ngsrc": "warn",
+  "@angular-eslint/template/prefer-template-literal": "error",
+  "@angular-eslint/template/role-has-required-aria": "warn",
+  "@angular-eslint/template/table-scope": "error",
+  // "@angular-eslint/template/use-track-by-function": "error",
+  "@angular-eslint/template/valid-aria": "warn",
+  "@angular-eslint/template/attributes-order": [
+    "error",
+    {
+      alphabetical: true,
+      order: [
+        "STRUCTURAL_DIRECTIVE",
+        "TEMPLATE_REFERENCE",
+        "ATTRIBUTE_BINDING",
+        "INPUT_BINDING",
+        "TWO_WAY_BINDING",
+        "OUTPUT_BINDING"
+      ]
+    }
+  ],
+  "@angular-eslint/template/prefer-self-closing-tags": "error",
+  "@angular-eslint/template/prefer-static-string-properties": "error"
+};
+
 // Export all ESLint Ruleset Configurations
 export {
   CONSOLE_DEBUGGER_ERROR_ESLINT_CONFIG_RULES,
@@ -414,5 +477,6 @@ export {
   UNICORN_ESLINT_CONFIG_RULES,
   ANGULAR_ESLINT_CONFIG_RULES,
   REACT_ESLINT_CONFIG_RULES,
-  REACT_HOOKS_ESLINT_CONFIG_RULES
+  REACT_HOOKS_ESLINT_CONFIG_RULES,
+  ANGULAR_HTML_TEMPLATE_ESLINT_CONFIG_RULES
 };
