@@ -184,7 +184,7 @@ export default [
 
       // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
     }
-  },
+  }
 ];
 ```
 
@@ -202,7 +202,7 @@ const eslintPluginSimpleImportSort = require("eslint-plugin-simple-import-sort")
 const eslintImportPlugin = require("eslint-plugin-import");
 const eslintReactPlugin = require("eslint-plugin-react");
 const eslintReactHooksPlugin = require("eslint-plugin-react-hooks");
-const angularEslintPlugin = require("@angular-eslint/eslint-plugin")
+const angularEslintPlugin = require("@angular-eslint/eslint-plugin");
 const angularTemplateParser = require("@angular-eslint/template-parser");
 const angularTemplatePlugin = require("@angular-eslint/eslint-plugin-template");
 
@@ -315,7 +315,7 @@ module.exports = [
 
       // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
     }
-  },
+  }
 ];
 ```
 
