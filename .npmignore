@@ -1,5 +1,6 @@
 # Development Code Directories
 /src
+/configs
 /node_modules
 /.changeset
 /.github
