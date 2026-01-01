@@ -67,9 +67,11 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintImportPlugin from "eslint-plugin-import";
-import angularEslintPlugin from "@angular-eslint/eslint-plugin";
 import eslintReactPlugin from "eslint-plugin-react";
 import eslintReactHooksPlugin from "eslint-plugin-react-hooks";
+import angularEslintPlugin from "@angular-eslint/eslint-plugin";
+import angularTemplateParser from "@angular-eslint/template-parser";
+import angularTemplatePlugin from "@angular-eslint/eslint-plugin-template";
 
 const DIR_NAME = import.meta.dirname;
 
@@ -167,6 +169,21 @@ export default [
 
       // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
     }
+  },
+  {
+    // Angular-Specific (Omit if not necessary)
+    files: ["src/**/*.html"],
+    languageOptions: {
+      parser: angularTemplateParser
+    },
+    plugins: {
+      "@angular-eslint/template": angularTemplatePlugin
+    },
+    rules: {
+      ...ESLINT_RULES.ANGULAR_HTML_TEMPLATE_ESLINT_CONFIG_RULES
+
+      // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
+    }
   }
 ];
 ```
@@ -183,9 +200,11 @@ const globals = require("globals");
 const tseslint = require("typescript-eslint");
 const eslintPluginSimpleImportSort = require("eslint-plugin-simple-import-sort");
 const eslintImportPlugin = require("eslint-plugin-import");
-const angularEslintPlugin = require("@angular-eslint/eslint-plugin");
 const eslintReactPlugin = require("eslint-plugin-react");
 const eslintReactHooksPlugin = require("eslint-plugin-react-hooks");
+const angularEslintPlugin = require("@angular-eslint/eslint-plugin");
+const angularTemplateParser = require("@angular-eslint/template-parser");
+const angularTemplatePlugin = require("@angular-eslint/eslint-plugin-template");
 
 module.exports = [
   {
@@ -278,6 +297,21 @@ module.exports = [
       // ESLint Rules: React
       ...ESLINT_RULES.REACT_ESLINT_CONFIG_RULES,
       ...ESLINT_RULES.REACT_HOOKS_ESLINT_CONFIG_RULES
+
+      // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
+    }
+  },
+  {
+    // Angular-Specific (Omit if not necessary)
+    files: ["src/**/*.html"],
+    languageOptions: {
+      parser: angularTemplateParser
+    },
+    plugins: {
+      "@angular-eslint/template": angularTemplatePlugin
+    },
+    rules: {
+      ...ESLINT_RULES.ANGULAR_HTML_TEMPLATE_ESLINT_CONFIG_RULES
 
       // TODO: Add more ESLint rules here for personal customization (or you can override existing rules manually based on project/team development norms)
     }
