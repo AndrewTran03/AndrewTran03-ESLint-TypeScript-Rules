@@ -18,4 +18,5 @@ tsup.config.ts
 .prettierrc
 
 # Misc.
-personal-notes.txt
+npm*
+personal*
