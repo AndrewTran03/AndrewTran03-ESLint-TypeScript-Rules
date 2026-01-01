@@ -116,8 +116,8 @@ module.exports = [
       // TypeScript ESLint Rules
       ...ESLINT_RULES.TYPESCRIPT_ESLINT_CONFIG_RULES,
 
-      // Unicorn ESLint Rules
-      ...ESLINT_RULES.UNICORN_ESLINT_CONFIG_RULES,
+      // Unicorn ESLint Rules (Note: Deprecated. Do NOT add these rules to CommonJS configurations after 'v0.0.62')
+      // ...ESLINT_RULES.UNICORN_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: Console/Debugger to "Warn"
       ...ESLINT_RULES.CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES,
