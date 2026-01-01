@@ -63,7 +63,7 @@ npm install eslint eslint-plugin-import eslint-plugin-simple-import-sort eslint-
 
 #### Alternative - `CommonJS` (No Longer Recommended)
 
-- **Note:** This configuration method is `NOT` **recommended** as it may cause compatibility issues with certain newer versions of these `ESLint` plugin packages and rules. 
+- **Note:** This configuration method is `NOT` **recommended** as it may cause compatibility issues with certain newer versions of these `ESLint` plugin packages and rules.
 - Furthermore, modern `ESLint` features (and the larger `ECMAScript` ecosystem) is moving towards `ESModules`, rather than `CommonJS`. Thus, it is highly recommended to migrate your codebase to `ESModules` and use the `ESLint Flat Config` system instead and only use this option as a **last resort**.
 
 - NOTE: A `copyable` example of `CommonJS` can be found in this repository at [`configs/eslint.config.cjs`](./configs/eslint.config.cjs).
