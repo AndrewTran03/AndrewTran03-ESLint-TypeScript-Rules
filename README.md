@@ -51,25 +51,29 @@ npm install eslint eslint-plugin-import eslint-plugin-simple-import-sort eslint-
 - Type `npm run lint` in your terminal to log your linting warnings/errors.
 - Type `npm run lint:fix` in your terminal to allow `ESLint` to try and resolve your linting warnings/errors within your project (wherever possible).
 
-### `ESLint` File Configuration
+## `ESLint` File Configuration
 
-#### Recommended (Stable) - `CommonJS`
+### Recommended (Stable) - `ESLint` File Configuration
+
+- **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `import.meta.dirname` or `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
 
 ---
 
 ```js
-// eslint.config.cjs
-const ESLINT_RULES = require("@andrewt03/eslint-typescript-rules");
-const eslintPluginUnicorn = require("eslint-plugin-unicorn");
-const globals = require("globals");
-const tseslint = require("typescript-eslint");
-const eslintPluginSimpleImportSort = require("eslint-plugin-simple-import-sort");
-const eslintImportPlugin = require("eslint-plugin-import");
-const angularEslintPlugin = require("@angular-eslint/eslint-plugin");
-const eslintReactPlugin = require("eslint-plugin-react");
-const eslintReactHooksPlugin = require("eslint-plugin-react-hooks");
+// eslint.config.mjs
+import ESLINT_RULES from "@andrewt03/eslint-typescript-rules";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
+import eslintImportPlugin from "eslint-plugin-import";
+import angularEslintPlugin from "@angular-eslint/eslint-plugin";
+import eslintReactPlugin from "eslint-plugin-react";
+import eslintReactHooksPlugin from "eslint-plugin-react-hooks";
 
-module.exports = [
+const DIR_NAME = import.meta.dirname;
+
+export default [
   {
     ignores: ["**/dist"]
   },
@@ -88,7 +92,7 @@ module.exports = [
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: __dirname,
+        tsconfigRootDir: DIR_NAME,
 
         // React-Specific (Omit if not necessary)
         ecmaFeatures: {
@@ -167,27 +171,23 @@ module.exports = [
 ];
 ```
 
-#### Alternative - `ESModules`
-
-- **Note:** In `ESModules`, the `__dirname` variable is not available. As a fix, in most cases, we can leverage `import.meta.dirname` or `process.cwd()` in this case since the `ESLint` file configuration is typically written at the top-level of a project. However, if this does not work, some alternatives can be found in this [StackOverflow](https://stackoverflow.com/questions/46745014/alternative-for-dirname-in-node-js-when-using-es6-modules) post.
+#### Alternative - `CommonJS` (No Longer Recommended)
 
 ---
 
 ```js
-// eslint.config.mjs
-import ESLINT_RULES from "@andrewt03/eslint-typescript-rules";
-import eslintPluginUnicorn from "eslint-plugin-unicorn";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
-import eslintImportPlugin from "eslint-plugin-import";
-import angularEslintPlugin from "@angular-eslint/eslint-plugin";
-import eslintReactPlugin from "eslint-plugin-react";
-import eslintReactHooksPlugin from "eslint-plugin-react-hooks";
+// eslint.config.cjs
+const ESLINT_RULES = require("@andrewt03/eslint-typescript-rules");
+const eslintPluginUnicorn = require("eslint-plugin-unicorn");
+const globals = require("globals");
+const tseslint = require("typescript-eslint");
+const eslintPluginSimpleImportSort = require("eslint-plugin-simple-import-sort");
+const eslintImportPlugin = require("eslint-plugin-import");
+const angularEslintPlugin = require("@angular-eslint/eslint-plugin");
+const eslintReactPlugin = require("eslint-plugin-react");
+const eslintReactHooksPlugin = require("eslint-plugin-react-hooks");
 
-const DIR_NAME = import.meta.dirname;
-
-export default [
+module.exports = [
   {
     ignores: ["**/dist"]
   },
@@ -206,7 +206,7 @@ export default [
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: DIR_NAME,
+        tsconfigRootDir: __dirname,
 
         // React-Specific (Omit if not necessary)
         ecmaFeatures: {
@@ -234,8 +234,8 @@ export default [
       // TypeScript ESLint Rules
       ...ESLINT_RULES.TYPESCRIPT_ESLINT_CONFIG_RULES,
 
-      // Unicorn ESLint Rules
-      ...ESLINT_RULES.UNICORN_ESLINT_CONFIG_RULES,
+      // Unicorn ESLint Rules (Note: Deprecated. Do NOT add these rules to CommonJS configurations after 'v0.0.62')
+      // ...ESLINT_RULES.UNICORN_ESLINT_CONFIG_RULES,
 
       // ESLint Rules: Console/Debugger to "Warn"
       ...ESLINT_RULES.CONSOLE_DEBUGGER_WARN_ESLINT_CONFIG_RULES,
